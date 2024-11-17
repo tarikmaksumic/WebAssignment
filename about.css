@@ -8,9 +8,11 @@
 }
 
 body {
-    background: #eaeaea;
+    background: rgb(136, 136, 136);
     color: #ffffff;
     box-shadow: #222;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
 }
 
 .header {
@@ -26,19 +28,56 @@ body {
     z-index: 100;
 }
 
-.footer {
-    position: fixed;
-    top: 90%;
-    left: 0;
-    height: 10%;
+
+.column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 20px;
+  }
+
+  .about-section {
+    padding: 100px;
+    text-align: center;
+    background-color: #000000;
+    color: white;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: #e31717;
+  }
+
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
     width: 100%;
-    padding: 30px 8%;
-    background: black;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    z-index: -1;
-}
+  }
+
+  .button:hover {
+    background-color: #e31717;
+  }
+
 
 .logo {
     font-size: 25px;
@@ -132,7 +171,7 @@ body {
     color: #e31717;
 }
 
-.button{
+.logreg{
     display: flex;
     justify-content: space-between;
     width: 50px;
@@ -143,44 +182,7 @@ body {
     margin-left: 55%;
 }
 
-.home  {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 8% 0;
-    overflow: hidden;
-}
 
-.home-content {
-    max-width: 630px;
-}
-
-.home-content h1 {
-    font-size: 50px;
-    line-height: 1.2;
-    opacity: 0;
-    animation: slideBottom 1s ease forwards;
-    animation-delay: 1s;
-}
-
-.home-content h3 {
-    font-size: 40px;
-    color: #e31717;
-    opacity: 0;
-    animation: slideRight 1s ease forwards;
-    animation-delay: 1.3s;
-}
-
-.home-content p {
-    font-size: 16px;
-    margin: 15px 0 30px;
-    opacity: 0;
-    animation: slideLeft 1s ease forwards;
-    animation-delay: 1.6s;
-}
 
 .btn {
     display: inline-block;
@@ -203,44 +205,6 @@ body {
 .btn:hover {
     background: transparent;
     color: #e31717;
-}
-
-.home-img {
-    position: relative;
-    right: -9%;
-    width: 450px;
-    height: 450px;
-}
-
-.home-img .circle {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background: #eaeaea;
-    border: 25px solid #e31717;
-    border-radius: 50%;
-    /* Senka oko celog kruga */
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
-}
-
-
-
-.home-img .circle img {
-    position: absolute;
-    top: -40px;
-    left: -400px;
-    max-width: 850px;
-}
-
-.home .circle2 {
-    position: absolute;
-    top: -10%;
-    right: -40%;
-    width: 1100px;
-    height: 1100px;
-    background: #e31717;
-    border-radius: 50%;
-    z-index: -1;
 }
 
 /* ANIMACIJA */
@@ -299,21 +263,7 @@ body {
     }
 }
 
-.background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1; 
-}
-
-.home {
-    position: relative;
-    overflow: hidden; 
-}
-
+  
 @media screen and (max-width: 650px) {
     .column {
       width: 100%;

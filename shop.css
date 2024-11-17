@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: rgb(136, 136, 136);
+    color: #ffffff;
+    box-shadow: #222;
+    width: 100%;
+    padding: 120px;
+
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 8%;
+    background: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+}
+
+.product {
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+  }
+
+  .main_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    z-index: -1;
+    opacity: 0;
+    animation: slideTop 1.9s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+  }
+
+  .product img {
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+  }
+
+  .product_desc {
+    text-align: center;
+    padding: 20px 0px;
+  }
+
+  .product_desc h3 {
+    font-size: 24px;
+    padding: 10px 0px;
+  }
+
+  .product_desc p{
+    font-size: 18px;
+  }
+
+  .checked {
+    color: #e31717;
+  }
+
+.logo {
+    font-size: 25px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 18px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 20px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+
+.navbar a:hover,
+.navbar a.active {
+    color: #e31717;
+    ;
+}
+
+
+.loginbtn {
+    display: flex;
+    justify-content: space-between;
+    width: 50px;
+    height: 25px;
+    background: transparent;
+    color: #ffffff;
+    border: none;
+    margin-right: 10px;
+}
+
+.loginbtn:hover {
+    color: #e31717;
+}
+
+.regbtn {
+    display: flex;
+    justify-content: space-between;
+    width: 50px;
+    height: 25px;
+    background: transparent;
+    color: #ffffff;
+    border: none;
+    margin-right: 10px;
+}
+
+.regbtn:hover {
+    color: #e31717;
+}
+
+.button{
+    display: flex;
+    justify-content: space-between;
+    width: 50px;
+    height: 25px;
+    background: transparent;
+    color: #e31717;
+    border: none; 
+    margin-left: 55%;
+}
+
+
+
+
+
+/* ANIMACIJA */
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom{
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideSci {
+    0% {
+        transform: translateX(100px) rotate(45deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px) rotate(45deg);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+    .all {
+        flex-direction: column;
+    }
+  }

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="mcars" href="./images/mcars-icon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCars Car Dealership</title>
+    <link rel="stylesheet" href="contact.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+<header class="header">
+    <a href="./index.html" class="logo">MCars.</a>
+
+    <nav class="navbar">
+        <a href="./index.html" style="--i:1">Home</a>
+        <a href="./shop.html" style="--i:2">Shop</a>
+        <a href="./about.html" style="--i:3">About</a>
+        <a href="#" style="--i:4" class="active">Contact</a>
+        <a href="./services.html" style="--i:5">Services</a>
+    </nav>
+    
+     <div class="button">
+        <form action="./login.html" class="form"></form>
+        <button onclick="document.location='./login.html'" class="loginbtn" href="#" style="--a:1">Login</button>
+        <button onclick="document.location='./register.html'" class="regbtn" href="#" style="--a:1">Register</button>
+     </div>
+
+</header>
+
+<section class="home">
+    <div class="container">
+        <div style="text-align:center">
+          <h2>Contact Us</h2>
+          <p>Swing by for a cup of coffee, or leave us a message:</p>
+        </div>
+        <div class="row">
+          <div class="column">
+            <img src="./images/mcars.png" style="width:100%">
+          </div>
+          <div class="location">
+            <button class="lokacija" onclick="getLocation()">Location</button>
+            <p id="demo"></p>
+            <script>
+              const x = document.getElementById("demo");
+              
+              function getLocation() {
+                if (navigator.geolocation) {
+                  navigator.geolocation.getCurrentPosition(showPosition);
+                } else { 
+                  x.innerHTML = "Geolocation is not supported by this browser.";
+                }
+              }
+              
+              function showPosition(position) {
+                x.innerHTML = "Latitude: " + position.coords.latitude + 
+                "<br>Longitude: " + position.coords.longitude;
+              }
+              </script>
+          </div>
+          <div class="column">
+            <form action="mailto:tarikmaksumic3@gmail.com" class="form" target="_blank" method="POST">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+              <label for="country">Country</label>
+              <input type="text" id="country" name="country" placeholder="Where are you from..">
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+
+          
+        </div>
+      </div>
+
+      <section class="APIxBootstrap">
+
+      </section>
+
+<footer>
+    <div class="footer">
+        <div class="social-media">
+            <a href="#" style="--i:1"><i class="bx bxl-twitter"></i></a>
+            <a href="#" style="--i:2"><i class="bx bxl-facebook"></i></a>
+            <a href="#" style="--i:3"><i class="bx bxl-instagram"></i></a>
+        </div>
+    </div>
+</footer>
+
+    </div>
+</section>
+</body>
+
+</html>
